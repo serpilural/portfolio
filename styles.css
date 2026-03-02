@@ -380,12 +380,22 @@ h2.serif-heading em {
 /* PROJECTS */
 #projects { background: var(--bg-warm); }
 
-.projects-asymmetric {
+.projects-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr 200px 1fr;
   gap: 2rem;
   margin-top: 4rem;
-  align-items: start;
+  align-items: stretch;
+}
+
+.project-tree {
+  overflow: hidden;
+}
+
+.project-tree img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-feature {
@@ -456,12 +466,6 @@ h2.serif-heading em {
   padding-bottom: 2px;
 }
 
-.project-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .project-coming {
   border: 1px dashed var(--border);
   padding: 3rem 2rem;
@@ -471,7 +475,6 @@ h2.serif-heading em {
   justify-content: center;
   gap: 0.75rem;
   text-align: center;
-  min-height: 200px;
   color: var(--text-muted);
 }
 
@@ -742,7 +745,8 @@ footer {
   .hero-left { padding: 5rem 1.5rem 3rem; }
   .hero-left::after { display: none; }
   .section-inner { padding: 5rem 1.5rem; }
-  .about-columns, .projects-asymmetric, #contact .section-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-columns, .projects-grid, #contact .section-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .project-tree { max-height: 300px; }
   .exp-entry { grid-template-columns: 1fr; gap: 0.5rem; }
   .exp-marker { display: none; }
 }
