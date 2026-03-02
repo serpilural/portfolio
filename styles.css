@@ -382,20 +382,10 @@ h2.serif-heading em {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 200px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-top: 4rem;
   align-items: stretch;
-}
-
-.project-tree {
-  overflow: hidden;
-}
-
-.project-tree img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .project-feature {
@@ -746,7 +736,6 @@ footer {
   .hero-left::after { display: none; }
   .section-inner { padding: 5rem 1.5rem; }
   .about-columns, .projects-grid, #contact .section-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-  .project-tree { max-height: 300px; }
   .exp-entry { grid-template-columns: 1fr; gap: 0.5rem; }
   .exp-marker { display: none; }
 }
